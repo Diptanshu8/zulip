@@ -93,6 +93,7 @@ def run(args, **kwargs):
         args = " ".join(args)
 
     def run_wrapper(args,**kwargs):
+        # type: (Sequence[str], **Any) -> None
         process = subprocess.Popen(args, **kwargs)
         output=process.communicate()
         retcode = process.wait()
