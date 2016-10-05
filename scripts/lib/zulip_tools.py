@@ -99,6 +99,6 @@ def run(args, **kwargs):
         retcode = process.wait()
         if retcode:
             print("Exact Error>>\n"+str(output[1])+"<<")
-            raise subprocess.CalledProcessError(retcode,args,output[1]) # type: ignore # https://github.com/python/typeshed/pull/329
+            raise subprocess.CalledProcessError(retcode, args, output[1]) # type: ignore # https://github.com/python/typeshed/pull/329
     run_wrapper(args,**kwargs)
     return 0
