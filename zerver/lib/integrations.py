@@ -75,6 +75,7 @@ class WebhookIntegration(Integration):
 WEBHOOK_INTEGRATIONS = [
     WebhookIntegration('airbrake'),
     WebhookIntegration('beanstalk'),
+    WebhookIntegration('beeminder', display_name='Beeminder'),
     WebhookIntegration('bitbucket2', logo='static/images/integrations/logos/bitbucket.png', display_name='Bitbucket'),
     WebhookIntegration('bitbucket', secondary_line_text='(Enterprise)'),
     WebhookIntegration('circleci', display_name='CircleCI'),
