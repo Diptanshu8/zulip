@@ -31,7 +31,7 @@ def api_beeminder_webhook(request, user_profile, client,
         return json_error(_("Missing key {} in JSON").format(str(e)))
 
     # send the message
-    check_send_message(user_profile, client, 'private', ['cordelia@zulip.com'], topic, body)
-    #check_send_message(user_profile, client, 'stream', [stream], topic, body)
+    #check_send_message(user_profile, client, 'private', ['cordelia@zulip.com'], topic, body)
+    check_send_message(user_profile, client, 'stream', [stream], topic, body)
     
     return json_success()
